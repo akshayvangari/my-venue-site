@@ -243,7 +243,6 @@
 
       <!-- Desktop Navigation Links -->
       <nav class="hidden items-center gap-8 xl:gap-12 lg:flex" aria-label="Main Navigation">
-        <a href="#about" class="link-underline text-xs uppercase tracking-[0.22em] text-foreground/80 hover:text-gold transition-colors">About</a>
         <a href="#venues" class="link-underline text-xs uppercase tracking-[0.22em] text-foreground/80 hover:text-gold transition-colors">Venues</a>
         <a href="#rooms" class="link-underline text-xs uppercase tracking-[0.22em] text-foreground/80 hover:text-gold transition-colors">Stay</a>
         <a href="#events" class="link-underline text-xs uppercase tracking-[0.22em] text-foreground/80 hover:text-gold transition-colors">Events</a>
@@ -273,7 +272,6 @@
     <!-- Mobile Drawer -->
     <div id="mobile-menu" class="hidden lg:hidden border-b border-charcoal-border bg-charcoal px-6 py-6 transition-all">
       <div class="flex flex-col gap-4">
-        <a href="#about" class="text-sm uppercase tracking-[0.2em] text-foreground/80 hover:text-gold mobile-nav-link">About</a>
         <a href="#venues" class="text-sm uppercase tracking-[0.2em] text-foreground/80 hover:text-gold mobile-nav-link">Venues</a>
         <a href="#rooms" class="text-sm uppercase tracking-[0.2em] text-foreground/80 hover:text-gold mobile-nav-link">Stay / Rooms</a>
         <a href="#events" class="text-sm uppercase tracking-[0.2em] text-foreground/80 hover:text-gold mobile-nav-link">Events</a>
@@ -351,68 +349,6 @@
     </div>
   </section>
 
-  <!-- About Section -->
-  <section id="about" class="py-24 sm:py-32 border-t border-charcoal-border relative overflow-hidden">
-    <div class="w-full max-w-[1780px] mx-auto px-6 sm:px-10 lg:px-16 xl:px-20 2xl:px-24">
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
-        
-        <!-- Left: Editorial Content -->
-        <div class="lg:col-span-6 space-y-6">
-          <div class="inline-flex items-center gap-2 text-xs uppercase tracking-[0.24em] text-gold">
-            <span>✦</span>
-            <span>About Shubhamasthu</span>
-          </div>
-          <h2 class="font-serif text-3xl sm:text-5xl font-light text-foreground leading-tight">
-            Every celebration deserves an <span class="italic text-gold">extraordinary</span> setting.
-          </h2>
-          <p class="text-muted-foreground text-sm sm:text-base leading-relaxed">
-            Nestled at Sushmitha Trade Centre, beside SVS College in Bheemaram, Hanamkonda, Shubhamasthu Convention is conceived as an architectural landmark dedicated to life's most momentous occasions.
-          </p>
-          <p class="text-muted-foreground text-sm sm:text-base leading-relaxed">
-            From regal traditional Indian weddings and lavish receptions to international corporate summits, our pillarless halls, expansive open-air lawns, and curated guest accommodations offer seamless luxury without compromise.
-          </p>
-
-          <!-- Core Pillars Grid -->
-          <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 pt-6">
-            <div class="border-l-2 border-gold/40 pl-4 space-y-1 rounded-r-xl py-2 -my-2 transition-all duration-300 hover:border-gold hover:bg-charcoal/50 hover:translate-x-1.5 cursor-default group">
-              <h3 class="font-serif text-lg text-foreground font-normal group-hover:text-gold transition-colors">Pillarless Acoustics</h3>
-              <p class="text-xs text-muted-foreground leading-relaxed">Engineered for unobstructed panoramic sightlines and concert-grade sound.</p>
-            </div>
-            <div class="border-l-2 border-gold/40 pl-4 space-y-1 rounded-r-xl py-2 -my-2 transition-all duration-300 hover:border-gold hover:bg-charcoal/50 hover:translate-x-1.5 cursor-default group">
-              <h3 class="font-serif text-lg text-foreground font-normal group-hover:text-gold transition-colors">Valet & Ample Parking</h3>
-              <p class="text-xs text-muted-foreground leading-relaxed">Seamless ingress with dedicated parking lots for 1,200+ vehicles.</p>
-            </div>
-            <div class="border-l-2 border-gold/40 pl-4 space-y-1 rounded-r-xl py-2 -my-2 transition-all duration-300 hover:border-gold hover:bg-charcoal/50 hover:translate-x-1.5 cursor-default group">
-              <h3 class="font-serif text-lg text-foreground font-normal group-hover:text-gold transition-colors">Prime Bheemaram Corridor</h3>
-              <p class="text-xs text-muted-foreground leading-relaxed">Beside SVS College, with effortless access from Kazipet and Warangal.</p>
-            </div>
-            <div class="border-l-2 border-gold/40 pl-4 space-y-1 rounded-r-xl py-2 -my-2 transition-all duration-300 hover:border-gold hover:bg-charcoal/50 hover:translate-x-1.5 cursor-default group">
-              <h3 class="font-serif text-lg text-foreground font-normal group-hover:text-gold transition-colors">Gourmet Catering Infrastructure</h3>
-              <p class="text-xs text-muted-foreground leading-relaxed">State-of-the-art live banqueting kitchens for traditional & global cuisine.</p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Right: Layered Image Gallery -->
-        <div class="lg:col-span-6 relative">
-          <div class="relative mx-auto max-w-lg lg:max-w-none">
-            <!-- Main Featured Image -->
-            <div class="overflow-hidden rounded-2xl border border-charcoal-border shadow-2xl">
-              <img src="assets/images/about-featured.jpg" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1544077960-604201fe74bc?auto=format&fit=crop&w=1200&q=80';" 
-                   alt="Grand Banquet Hall" 
-                   class="h-[460px] sm:h-[520px] lg:h-[580px] w-full object-cover transition-transform duration-700 hover:scale-105">
-            </div>
-            <!-- Floating Badge Card -->
-            <div class="absolute -bottom-8 -left-6 sm:bottom-6 sm:-left-8 rounded-xl border border-gold/30 bg-charcoal/95 p-6 backdrop-blur-xl shadow-2xl max-w-xs transition-all duration-500 hover:border-gold hover:scale-105 hover:shadow-[0_0_30px_rgba(197,160,89,0.3)] cursor-default">
-              <div class="font-serif text-2xl text-gold font-light">Hanamkonda's Premier</div>
-              <div class="text-xs text-muted-foreground mt-1">Wedding & Convention Destination crafted for memories that last generations.</div>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
 
   <!-- Venues Section -->
   <section id="venues" class="py-24 sm:py-32 bg-charcoal/40 border-t border-charcoal-border">
@@ -1066,7 +1002,6 @@
         <div class="space-y-3">
           <h4 class="text-xs uppercase tracking-[0.2em] text-foreground font-semibold">Discover</h4>
           <ul class="space-y-2 text-xs text-muted-foreground">
-            <li><a href="#about" class="hover:text-gold transition-colors">About Us</a></li>
             <li><a href="#venues" class="hover:text-gold transition-colors">Halls & Lawns</a></li>
             <li><a href="#rooms" class="hover:text-gold transition-colors">Guest Rooms</a></li>
             <li><a href="#events" class="hover:text-gold transition-colors">Events & Occasions</a></li>
