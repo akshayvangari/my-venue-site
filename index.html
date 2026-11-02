@@ -664,21 +664,15 @@
             Moments, <span class="italic text-gold">beautifully held.</span>
           </h2>
         </div>
-        <!-- Filter Tabs -->
-        <div class="flex flex-wrap gap-2">
-          <button onclick="filterGallery('all')" class="gallery-btn active px-4 py-1.5 text-xs uppercase tracking-[0.18em] rounded-full border border-gold bg-gold text-black font-semibold transition-all">All</button>
-          <button onclick="filterGallery('venue')" class="gallery-btn px-4 py-1.5 text-xs uppercase tracking-[0.18em] rounded-full border border-charcoal-border text-muted-foreground hover:text-foreground transition-all">Venue</button>
-          <button onclick="filterGallery('celebrations')" class="gallery-btn px-4 py-1.5 text-xs uppercase tracking-[0.18em] rounded-full border border-charcoal-border text-muted-foreground hover:text-foreground transition-all">Celebrations</button>
-          <button onclick="filterGallery('rooms')" class="gallery-btn px-4 py-1.5 text-xs uppercase tracking-[0.18em] rounded-full border border-charcoal-border text-muted-foreground hover:text-foreground transition-all">Rooms</button>
-        </div>
+
       </div>
 
       <!-- Photo Grid -->
-      <div id="gallery-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+      <div id="gallery-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-4 gap-6">
         <!-- Item 1 -->
-        <div class="gallery-item venue luxury-card overflow-hidden rounded-2xl border border-charcoal-border h-72 cursor-pointer group relative" onclick="openLightbox(this)">
-          <img src="https://images.unsplash.com/photo-1519167758481-83f550bb49b3?auto=format&fit=crop&w=1000&q=80" 
-               alt="Grand Hall Interior" 
+        <div class="gallery-item venue luxury-card overflow-hidden rounded-2xl border border-charcoal-border h-72 sm:h-80 cursor-pointer group relative" onclick="openLightbox(this)">
+          <img src="assets/images/gallery_1.jpg" 
+               alt="Convention Hall View 1" 
                class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110">
           <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
             <span class="text-xs uppercase tracking-widest text-gold border border-gold/60 bg-black/60 px-5 py-2.5 rounded-full backdrop-blur-md transform translate-y-3 group-hover:translate-y-0 transition-transform duration-300 shadow-[0_0_20px_rgba(197,160,89,0.3)]">View Full ✦</span>
@@ -686,9 +680,9 @@
         </div>
 
         <!-- Item 2 -->
-        <div class="gallery-item celebrations luxury-card overflow-hidden rounded-2xl border border-charcoal-border h-72 cursor-pointer group relative" onclick="openLightbox(this)">
-          <img src="https://images.unsplash.com/photo-1544077960-604201fe74bc?auto=format&fit=crop&w=1000&q=80" 
-               alt="Banquet Dinner Setup" 
+        <div class="gallery-item venue luxury-card overflow-hidden rounded-2xl border border-charcoal-border h-72 sm:h-80 cursor-pointer group relative" onclick="openLightbox(this)">
+          <img src="assets/images/gallery_2.jpg" 
+               alt="Convention Hall View 2" 
                class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110">
           <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
             <span class="text-xs uppercase tracking-widest text-gold border border-gold/60 bg-black/60 px-5 py-2.5 rounded-full backdrop-blur-md transform translate-y-3 group-hover:translate-y-0 transition-transform duration-300 shadow-[0_0_20px_rgba(197,160,89,0.3)]">View Full ✦</span>
@@ -696,9 +690,9 @@
         </div>
 
         <!-- Item 3 -->
-        <div class="gallery-item venue luxury-card overflow-hidden rounded-2xl border border-charcoal-border h-72 cursor-pointer group relative" onclick="openLightbox(this)">
-          <img src="assets/images/royal-lawn.jpg" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?auto=format&fit=crop&w=1000&q=80';" 
-               alt="Open Lawn Sunset" 
+        <div class="gallery-item venue luxury-card overflow-hidden rounded-2xl border border-charcoal-border h-72 sm:h-80 cursor-pointer group relative" onclick="openLightbox(this)">
+          <img src="assets/images/gallery_3.jpg" 
+               alt="Convention Hall View 3" 
                class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110">
           <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
             <span class="text-xs uppercase tracking-widest text-gold border border-gold/60 bg-black/60 px-5 py-2.5 rounded-full backdrop-blur-md transform translate-y-3 group-hover:translate-y-0 transition-transform duration-300 shadow-[0_0_20px_rgba(197,160,89,0.3)]">View Full ✦</span>
@@ -706,49 +700,9 @@
         </div>
 
         <!-- Item 4 -->
-        <div class="gallery-item celebrations luxury-card overflow-hidden rounded-2xl border border-charcoal-border h-72 cursor-pointer group relative" onclick="openLightbox(this)">
-          <img src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&w=1000&q=80" 
-               alt="Wedding Floral Mandap" 
-               class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110">
-          <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-            <span class="text-xs uppercase tracking-widest text-gold border border-gold/60 bg-black/60 px-5 py-2.5 rounded-full backdrop-blur-md transform translate-y-3 group-hover:translate-y-0 transition-transform duration-300 shadow-[0_0_20px_rgba(197,160,89,0.3)]">View Full ✦</span>
-          </div>
-        </div>
-
-        <!-- Item 5 -->
-        <div class="gallery-item rooms luxury-card overflow-hidden rounded-2xl border border-charcoal-border h-72 cursor-pointer group relative" onclick="openLightbox(this)">
-          <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1000&q=80" 
-               alt="Luxury Bridal Suite" 
-               class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110">
-          <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-            <span class="text-xs uppercase tracking-widest text-gold border border-gold/60 bg-black/60 px-5 py-2.5 rounded-full backdrop-blur-md transform translate-y-3 group-hover:translate-y-0 transition-transform duration-300 shadow-[0_0_20px_rgba(197,160,89,0.3)]">View Full ✦</span>
-          </div>
-        </div>
-
-        <!-- Item 6 -->
-        <div class="gallery-item venue luxury-card overflow-hidden rounded-2xl border border-charcoal-border h-72 cursor-pointer group relative" onclick="openLightbox(this)">
-          <img src="assets/images/magnum-hall.jpg" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1000&q=80';" 
-               alt="Grand Hall Night Illumination" 
-               class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110">
-          <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-            <span class="text-xs uppercase tracking-widest text-gold border border-gold/60 bg-black/60 px-5 py-2.5 rounded-full backdrop-blur-md transform translate-y-3 group-hover:translate-y-0 transition-transform duration-300 shadow-[0_0_20px_rgba(197,160,89,0.3)]">View Full ✦</span>
-          </div>
-        </div>
-
-        <!-- Item 7 -->
-        <div class="gallery-item celebrations luxury-card overflow-hidden rounded-2xl border border-charcoal-border h-72 cursor-pointer group relative" onclick="openLightbox(this)">
-          <img src="https://images.unsplash.com/photo-1532712938310-34cb3982ef74?auto=format&fit=crop&w=1000&q=80" 
-               alt="Banqueting Table Styling" 
-               class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110">
-          <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-            <span class="text-xs uppercase tracking-widest text-gold border border-gold/60 bg-black/60 px-5 py-2.5 rounded-full backdrop-blur-md transform translate-y-3 group-hover:translate-y-0 transition-transform duration-300 shadow-[0_0_20px_rgba(197,160,89,0.3)]">View Full ✦</span>
-          </div>
-        </div>
-
-        <!-- Item 8 -->
-        <div class="gallery-item rooms luxury-card overflow-hidden rounded-2xl border border-charcoal-border h-72 cursor-pointer group relative" onclick="openLightbox(this)">
-          <img src="https://images.unsplash.com/photo-1631049307264-da0ec9d70304?auto=format&fit=crop&w=1000&q=80" 
-               alt="Presidential Living Area" 
+        <div class="gallery-item venue luxury-card overflow-hidden rounded-2xl border border-charcoal-border h-72 sm:h-80 cursor-pointer group relative" onclick="openLightbox(this)">
+          <img src="assets/images/gallery_4.jpg" 
+               alt="Convention Hall View 4" 
                class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110">
           <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
             <span class="text-xs uppercase tracking-widest text-gold border border-gold/60 bg-black/60 px-5 py-2.5 rounded-full backdrop-blur-md transform translate-y-3 group-hover:translate-y-0 transition-transform duration-300 shadow-[0_0_20px_rgba(197,160,89,0.3)]">View Full ✦</span>
