@@ -429,159 +429,147 @@
   <!-- Rooms & Stay Section -->
   <section id="rooms" class="py-24 sm:py-32 border-t border-charcoal-border">
     <div class="w-full max-w-[1780px] mx-auto px-6 sm:px-10 lg:px-16 xl:px-20 2xl:px-24">
-      <div class="max-w-3xl mb-16">
-        <div class="inline-flex items-center gap-2 text-xs uppercase tracking-[0.24em] text-gold mb-3">
-          <span>✦</span>
-          <span>Stay With Us</span>
+      <!-- Section Header with Room Tabs -->
+      <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16">
+        <div>
+          <div class="inline-flex items-center gap-2 text-xs uppercase tracking-[0.24em] text-gold mb-3">
+            <span>✦</span>
+            <span>Stay With Us</span>
+          </div>
+          <h2 class="font-serif text-3xl sm:text-5xl font-light text-foreground">
+            Experience luxury <span class="italic text-gold">& comfort.</span>
+          </h2>
+          <p class="text-muted-foreground text-sm sm:text-base mt-4 leading-relaxed max-w-2xl">
+            Elegantly designed rooms and suites for guests, families, and bridal parties — just footsteps away from the celebration.
+          </p>
         </div>
-        <h2 class="font-serif text-3xl sm:text-5xl font-light text-foreground">
-          Experience luxury <span class="italic text-gold">& comfort.</span>
-        </h2>
-        <p class="text-muted-foreground text-sm sm:text-base mt-4 leading-relaxed">
-          Elegantly designed rooms and suites for guests, families, and bridal parties — just footsteps away from the celebration.
-        </p>
+        <!-- Tabs Switcher -->
+        <div class="inline-flex rounded-full border border-charcoal-border bg-charcoal p-1.5">
+          <button id="room-tab-1" onclick="switchRoom(1)" class="room-tab-btn active px-6 py-2 text-xs uppercase tracking-[0.18em] rounded-full transition-all bg-gold text-black font-semibold">
+            01 / Deluxe Room
+          </button>
+          <button id="room-tab-2" onclick="switchRoom(2)" class="room-tab-btn px-6 py-2 text-xs uppercase tracking-[0.18em] rounded-full transition-all text-muted-foreground hover:text-foreground">
+            02 / Family Room
+          </button>
+        </div>
       </div>
 
-      <!-- Luxury Rooms Showcase -->
-      <div id="rooms-container" class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 max-w-6xl mx-auto pt-4">
-        
-        <!-- Room 1: Deluxe Room -->
-        <div class="border border-charcoal-border bg-[#12100E] flex flex-col justify-between transition-all duration-500 hover:border-gold/60 hover:shadow-[0_20px_50px_rgba(0,0,0,0.8),0_0_25px_rgba(197,160,89,0.15)] group">
-          <!-- Room Image Header -->
-          <div class="relative h-[280px] sm:h-[350px] overflow-hidden bg-charcoal">
-            <img src="assets/images/room-deluxe.jpg" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1618773928121-c32242e63f39?auto=format&fit=crop&w=1000&q=80';" 
-                 alt="Deluxe Room" 
-                 class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105">
-            <div class="absolute inset-0 bg-gradient-to-t from-[#12100E] via-black/25 to-transparent"></div>
-            
-            <div class="absolute top-4 left-4 flex items-center gap-2">
-              <span class="border border-charcoal-border bg-black/80 px-3 py-1 text-xs uppercase tracking-widest text-gold font-medium">01</span>
-              <span class="border border-white/10 bg-black/60 px-3 py-1 text-[0.7rem] uppercase tracking-wider text-muted-foreground backdrop-blur-sm">Category 01</span>
+      <!-- Room 1: Deluxe Room -->
+      <div id="room-content-1" class="room-panel transition-opacity duration-500">
+        <div class="luxury-card grid grid-cols-1 lg:grid-cols-12 gap-8 items-center rounded-3xl border border-charcoal-border bg-charcoal/80 p-8 sm:p-12">
+          <div class="lg:col-span-7 space-y-6">
+            <span class="inline-block text-xs uppercase tracking-[0.24em] text-gold font-medium">Premium Accommodation</span>
+            <h3 class="font-serif text-3xl sm:text-4xl text-foreground font-normal">Deluxe Room</h3>
+            <p class="text-muted-foreground text-sm sm:text-base leading-relaxed">
+              Thoughtfully appointed with plush furnishings, modern amenities, and serene interiors — the Deluxe Room offers a refined retreat for couples and VIP guests attending grand celebrations.
+            </p>
+            <div class="grid grid-cols-2 sm:grid-cols-3 gap-6 pt-4 border-t border-charcoal-border">
+              <div>
+                <span class="block text-xs uppercase tracking-[0.16em] text-muted-foreground">Bedding</span>
+                <span class="font-serif text-2xl text-gold font-light">Plush King Bed</span>
+              </div>
+              <div>
+                <span class="block text-xs uppercase tracking-[0.16em] text-muted-foreground">Capacity</span>
+                <span class="font-serif text-2xl text-gold font-light">Up to 2 Guests</span>
+              </div>
+              <div>
+                <span class="block text-xs uppercase tracking-[0.16em] text-muted-foreground">Climate</span>
+                <span class="font-serif text-2xl text-gold font-light">Silent Inverter AC</span>
+              </div>
             </div>
-
-            <button type="button" onclick="openLightbox(this.parentElement)" class="absolute top-4 right-4 text-[0.7rem] uppercase tracking-widest text-gold/90 border border-gold/40 bg-black/75 hover:bg-gold hover:text-black px-3 py-1.5 backdrop-blur-sm transition-all duration-300 flex items-center gap-1.5 cursor-pointer">
-              <span>View Photo</span>
-              <span>✦</span>
-            </button>
-
-            <div class="absolute bottom-4 left-6 right-6">
-              <span class="text-xs uppercase tracking-[0.24em] text-gold/80 block">Suite Specifications</span>
-              <h3 class="font-serif text-3xl sm:text-4xl text-foreground font-light mt-0.5">Deluxe Room</h3>
+            <div class="grid grid-cols-2 sm:grid-cols-3 gap-6">
+              <div>
+                <span class="block text-xs uppercase tracking-[0.16em] text-muted-foreground">Entertainment</span>
+                <span class="font-serif text-lg text-foreground/80 font-light">43" Smart LED TV</span>
+              </div>
+              <div>
+                <span class="block text-xs uppercase tracking-[0.16em] text-muted-foreground">Connectivity</span>
+                <span class="font-serif text-lg text-foreground/80 font-light">High-Speed Wi-Fi</span>
+              </div>
+              <div>
+                <span class="block text-xs uppercase tracking-[0.16em] text-muted-foreground">Ideal For</span>
+                <span class="font-serif text-lg text-gold/80 font-light">Couples & VIP Guests</span>
+              </div>
+            </div>
+            <div class="pt-4 flex flex-wrap gap-4">
+              <a href="#booking" class="rounded-full bg-gold px-7 py-3 text-xs font-semibold uppercase tracking-[0.18em] text-black hover:bg-gold-light transition-all">
+                Book Deluxe Room
+              </a>
+              <a href="https://wa.me/917799007776?text=Hello!%20I%20would%20like%20to%20enquire%20about%20booking%20the%20Deluxe%20Room%20at%20Shubhamasthu%20Convention." target="_blank" class="rounded-full border border-gold/30 bg-gold/5 px-7 py-3 text-xs uppercase tracking-[0.18em] text-gold hover:bg-gold/10 transition-all">
+                WhatsApp Inquiry
+              </a>
             </div>
           </div>
-
-          <!-- Room Details Body -->
-          <div class="p-6 sm:p-8 flex-1 flex flex-col justify-between space-y-6">
-            <div class="grid grid-cols-2 gap-3 sm:gap-4 text-xs sm:text-sm">
-              <div class="border border-charcoal-border/70 bg-charcoal/30 p-3.5">
-                <span class="text-[0.68rem] uppercase tracking-wider text-muted-foreground block mb-0.5">Bedding</span>
-                <span class="font-medium text-foreground">Plush King Bed</span>
-              </div>
-              <div class="border border-charcoal-border/70 bg-charcoal/30 p-3.5">
-                <span class="text-[0.68rem] uppercase tracking-wider text-muted-foreground block mb-0.5">Capacity</span>
-                <span class="font-medium text-foreground">Up to 2 Guests</span>
-              </div>
-              <div class="border border-charcoal-border/70 bg-charcoal/30 p-3.5">
-                <span class="text-[0.68rem] uppercase tracking-wider text-muted-foreground block mb-0.5">Climate</span>
-                <span class="font-medium text-foreground">Silent Inverter AC</span>
-              </div>
-              <div class="border border-charcoal-border/70 bg-charcoal/30 p-3.5">
-                <span class="text-[0.68rem] uppercase tracking-wider text-muted-foreground block mb-0.5">Entertainment</span>
-                <span class="font-medium text-foreground">43\" Smart LED TV</span>
-              </div>
-              <div class="border border-charcoal-border/70 bg-charcoal/30 p-3.5">
-                <span class="text-[0.68rem] uppercase tracking-wider text-muted-foreground block mb-0.5">Connectivity</span>
-                <span class="font-medium text-foreground">High-Speed Wi-Fi</span>
-              </div>
-              <div class="border border-charcoal-border/70 bg-charcoal/30 p-3.5">
-                <span class="text-[0.68rem] uppercase tracking-wider text-muted-foreground block mb-0.5">Ideal For</span>
-                <span class="font-medium text-gold/90">Couples & VIP Guests</span>
-              </div>
-            </div>
-
-            <!-- Booking Actions -->
-            <div class="pt-4 border-t border-charcoal-border/60 flex flex-col sm:flex-row items-center gap-3">
-              <a href="#booking" class="btn-shimmer w-full text-center border border-gold bg-gold/15 py-3.5 text-xs font-semibold uppercase tracking-[0.22em] text-gold hover:bg-gold hover:text-black transition-all duration-300">
-                Book Deluxe Room →
-              </a>
-              <a href="https://wa.me/917799007776?text=Hello!%20I%20would%20like%20to%20enquire%20about%20booking%20the%20Deluxe%20Room%20at%20Shubhamasthu%20Convention." target="_blank" class="w-full sm:w-auto px-5 py-3.5 text-center border border-white/10 hover:border-gold/40 text-xs uppercase tracking-widest text-muted-foreground hover:text-foreground transition-all duration-300 whitespace-nowrap">
-                WhatsApp Enquiry
-              </a>
+          <div class="lg:col-span-5">
+            <div class="overflow-hidden rounded-2xl border border-charcoal-border">
+              <img src="assets/images/room-deluxe.jpg" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1618773928121-c32242e63f39?auto=format&fit=crop&w=1000&q=80';" 
+                   alt="Deluxe Room" 
+                   class="h-80 sm:h-96 lg:h-[460px] w-full object-cover transition-transform duration-700 hover:scale-105">
             </div>
           </div>
         </div>
-
-        <!-- Room 2: Family Room -->
-        <div class="border border-charcoal-border bg-[#12100E] flex flex-col justify-between transition-all duration-500 hover:border-gold/60 hover:shadow-[0_20px_50px_rgba(0,0,0,0.8),0_0_25px_rgba(197,160,89,0.15)] group">
-          <!-- Room Image Header -->
-          <div class="relative h-[280px] sm:h-[350px] overflow-hidden bg-charcoal">
-            <img src="assets/images/room-family.jpg" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=1000&q=80';" 
-                 alt="Family Room" 
-                 class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105">
-            <div class="absolute inset-0 bg-gradient-to-t from-[#12100E] via-black/25 to-transparent"></div>
-            
-            <div class="absolute top-4 left-4 flex items-center gap-2">
-              <span class="border border-charcoal-border bg-black/80 px-3 py-1 text-xs uppercase tracking-widest text-gold font-medium">02</span>
-              <span class="border border-white/10 bg-black/60 px-3 py-1 text-[0.7rem] uppercase tracking-wider text-muted-foreground backdrop-blur-sm">Category 02</span>
-            </div>
-
-            <button type="button" onclick="openLightbox(this.parentElement)" class="absolute top-4 right-4 text-[0.7rem] uppercase tracking-widest text-gold/90 border border-gold/40 bg-black/75 hover:bg-gold hover:text-black px-3 py-1.5 backdrop-blur-sm transition-all duration-300 flex items-center gap-1.5 cursor-pointer">
-              <span>View Photo</span>
-              <span>✦</span>
-            </button>
-
-            <div class="absolute bottom-4 left-6 right-6">
-              <span class="text-xs uppercase tracking-[0.24em] text-gold/80 block">Suite Specifications</span>
-              <h3 class="font-serif text-3xl sm:text-4xl text-foreground font-light mt-0.5">Family Room</h3>
-            </div>
-          </div>
-
-          <!-- Room Details Body -->
-          <div class="p-6 sm:p-8 flex-1 flex flex-col justify-between space-y-6">
-            <div class="grid grid-cols-2 gap-3 sm:gap-4 text-xs sm:text-sm">
-              <div class="border border-charcoal-border/70 bg-charcoal/30 p-3.5">
-                <span class="text-[0.68rem] uppercase tracking-wider text-muted-foreground block mb-0.5">Bedding</span>
-                <span class="font-medium text-foreground">Twin Queen Beds</span>
-              </div>
-              <div class="border border-charcoal-border/70 bg-charcoal/30 p-3.5">
-                <span class="text-[0.68rem] uppercase tracking-wider text-muted-foreground block mb-0.5">Capacity</span>
-                <span class="font-medium text-foreground">4 - 6 Guests</span>
-              </div>
-              <div class="border border-charcoal-border/70 bg-charcoal/30 p-3.5">
-                <span class="text-[0.68rem] uppercase tracking-wider text-muted-foreground block mb-0.5">Bathrooms</span>
-                <span class="font-medium text-foreground">Dual Attached Baths</span>
-              </div>
-              <div class="border border-charcoal-border/70 bg-charcoal/30 p-3.5">
-                <span class="text-[0.68rem] uppercase tracking-wider text-muted-foreground block mb-0.5">Storage</span>
-                <span class="font-medium text-foreground">Generous Wardrobes</span>
-              </div>
-              <div class="border border-charcoal-border/70 bg-charcoal/30 p-3.5">
-                <span class="text-[0.68rem] uppercase tracking-wider text-muted-foreground block mb-0.5">Climate</span>
-                <span class="font-medium text-foreground">Dual Inverter ACs</span>
-              </div>
-              <div class="border border-charcoal-border/70 bg-charcoal/30 p-3.5">
-                <span class="text-[0.68rem] uppercase tracking-wider text-muted-foreground block mb-0.5">Ideal For</span>
-                <span class="font-medium text-gold/90">Wedding Families</span>
-              </div>
-            </div>
-
-            <!-- Booking Actions -->
-            <div class="pt-4 border-t border-charcoal-border/60 flex flex-col sm:flex-row items-center gap-3">
-              <a href="#booking" class="btn-shimmer w-full text-center border border-gold bg-gold/15 py-3.5 text-xs font-semibold uppercase tracking-[0.22em] text-gold hover:bg-gold hover:text-black transition-all duration-300">
-                Book Family Room →
-              </a>
-              <a href="https://wa.me/917799007776?text=Hello!%20I%20would%20like%20to%20enquire%20about%20booking%20the%20Family%20Room%20at%20Shubhamasthu%20Convention." target="_blank" class="w-full sm:w-auto px-5 py-3.5 text-center border border-white/10 hover:border-gold/40 text-xs uppercase tracking-widest text-muted-foreground hover:text-foreground transition-all duration-300 whitespace-nowrap">
-                WhatsApp Enquiry
-              </a>
-            </div>
-          </div>
-        </div>
-
       </div>
+
+      <!-- Room 2: Family Room (Hidden by default) -->
+      <div id="room-content-2" class="room-panel hidden transition-opacity duration-500">
+        <div class="luxury-card grid grid-cols-1 lg:grid-cols-12 gap-8 items-center rounded-3xl border border-charcoal-border bg-charcoal/80 p-8 sm:p-12">
+          <div class="lg:col-span-7 space-y-6">
+            <span class="inline-block text-xs uppercase tracking-[0.24em] text-gold font-medium">Spacious Family Suite</span>
+            <h3 class="font-serif text-3xl sm:text-4xl text-foreground font-normal">Family Room</h3>
+            <p class="text-muted-foreground text-sm sm:text-base leading-relaxed">
+              Generously sized with twin queen beds, dual attached baths, and ample wardrobe space — the Family Room is designed for wedding families and groups who want comfort without compromising on luxury.
+            </p>
+            <div class="grid grid-cols-2 sm:grid-cols-3 gap-6 pt-4 border-t border-charcoal-border">
+              <div>
+                <span class="block text-xs uppercase tracking-[0.16em] text-muted-foreground">Bedding</span>
+                <span class="font-serif text-2xl text-gold font-light">Twin Queen Beds</span>
+              </div>
+              <div>
+                <span class="block text-xs uppercase tracking-[0.16em] text-muted-foreground">Capacity</span>
+                <span class="font-serif text-2xl text-gold font-light">4 - 6 Guests</span>
+              </div>
+              <div>
+                <span class="block text-xs uppercase tracking-[0.16em] text-muted-foreground">Bathrooms</span>
+                <span class="font-serif text-2xl text-gold font-light">Dual Attached</span>
+              </div>
+            </div>
+            <div class="grid grid-cols-2 sm:grid-cols-3 gap-6">
+              <div>
+                <span class="block text-xs uppercase tracking-[0.16em] text-muted-foreground">Storage</span>
+                <span class="font-serif text-lg text-foreground/80 font-light">Generous Wardrobes</span>
+              </div>
+              <div>
+                <span class="block text-xs uppercase tracking-[0.16em] text-muted-foreground">Climate</span>
+                <span class="font-serif text-lg text-foreground/80 font-light">Dual Inverter ACs</span>
+              </div>
+              <div>
+                <span class="block text-xs uppercase tracking-[0.16em] text-muted-foreground">Ideal For</span>
+                <span class="font-serif text-lg text-gold/80 font-light">Wedding Families</span>
+              </div>
+            </div>
+            <div class="pt-4 flex flex-wrap gap-4">
+              <a href="#booking" class="rounded-full bg-gold px-7 py-3 text-xs font-semibold uppercase tracking-[0.18em] text-black hover:bg-gold-light transition-all">
+                Book Family Room
+              </a>
+              <a href="https://wa.me/917799007776?text=Hello!%20I%20would%20like%20to%20enquire%20about%20booking%20the%20Family%20Room%20at%20Shubhamasthu%20Convention." target="_blank" class="rounded-full border border-gold/30 bg-gold/5 px-7 py-3 text-xs uppercase tracking-[0.18em] text-gold hover:bg-gold/10 transition-all">
+                WhatsApp Inquiry
+              </a>
+            </div>
+          </div>
+          <div class="lg:col-span-5">
+            <div class="overflow-hidden rounded-2xl border border-charcoal-border">
+              <img src="assets/images/room-family.jpg" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=1000&q=80';" 
+                   alt="Family Room" 
+                   class="h-80 sm:h-96 lg:h-[460px] w-full object-cover transition-transform duration-700 hover:scale-105">
+            </div>
+          </div>
+        </div>
+      </div>
+
     </div>
   </section>
 
-  <!-- Events We Host Section -->
+    <!-- Events We Host Section -->
   <section id="events" class="py-24 sm:py-32 bg-charcoal/30 border-t border-charcoal-border">
     <div class="w-full max-w-[1780px] mx-auto px-6 sm:px-10 lg:px-16 xl:px-20 2xl:px-24">
       <div class="text-center max-w-2xl mx-auto mb-16">
@@ -1025,6 +1013,26 @@
       } else {
         tab2.className = 'venue-tab-btn active px-6 py-2 text-xs uppercase tracking-[0.18em] rounded-full transition-all bg-gold text-black font-semibold';
         tab1.className = 'venue-tab-btn px-6 py-2 text-xs uppercase tracking-[0.18em] rounded-full transition-all text-muted-foreground hover:text-foreground';
+        content2.classList.remove('hidden');
+        content1.classList.add('hidden');
+      }
+    }
+
+    // Room Tab Switcher
+    function switchRoom(tabIndex) {
+      const tab1 = document.getElementById('room-tab-1');
+      const tab2 = document.getElementById('room-tab-2');
+      const content1 = document.getElementById('room-content-1');
+      const content2 = document.getElementById('room-content-2');
+
+      if (tabIndex === 1) {
+        tab1.className = 'room-tab-btn active px-6 py-2 text-xs uppercase tracking-[0.18em] rounded-full transition-all bg-gold text-black font-semibold';
+        tab2.className = 'room-tab-btn px-6 py-2 text-xs uppercase tracking-[0.18em] rounded-full transition-all text-muted-foreground hover:text-foreground';
+        content1.classList.remove('hidden');
+        content2.classList.add('hidden');
+      } else {
+        tab2.className = 'room-tab-btn active px-6 py-2 text-xs uppercase tracking-[0.18em] rounded-full transition-all bg-gold text-black font-semibold';
+        tab1.className = 'room-tab-btn px-6 py-2 text-xs uppercase tracking-[0.18em] rounded-full transition-all text-muted-foreground hover:text-foreground';
         content2.classList.remove('hidden');
         content1.classList.add('hidden');
       }
